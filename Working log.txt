@@ -55,4 +55,8 @@ BBC_zika_8: 97 articles vectorized ("heartbreaking" and "depending" has frequenc
 
 #CBC_zika_4: 39 articles single string, word cloud restrictions: max_font_size = 40, relative_scaling = .5
 
+Joint_zika_1: BBC + CBC single string, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+Joint_zika_2: BBC + CBC vectorized, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
 

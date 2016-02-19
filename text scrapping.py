@@ -171,7 +171,7 @@ def text_doc2lst(directory):
             result.append(file.read().replace('\n', '. '))
     return result
 
-result = text_doc2lst('BBC Zika')
+result = text_doc2lst('BBC Zika') + text_doc2lst('CBC Zika')
 vectorizer = tfidf(stop_words = 'english')
 X = vectorizer.fit_transform(result)
 idf = vectorizer.idf_
