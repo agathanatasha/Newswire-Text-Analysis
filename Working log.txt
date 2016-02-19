@@ -1,0 +1,58 @@
+Log
+
+search for PROBLEM to find out the obstacle faced in each stage
+'*' is placed in front of the best vectorized word cloud for the news wire
+'#' is placed in front of the best single string word cloud for the news wire
+
+PROBLEM: lots of news articles were not downloaded because of different html layouts
+
+BBC_zika_1: word cloud created by simply feeding in the preliminary 33 articles as one string
+
+BBC_zika_2: text preprocessed by tf-idf vectorizer, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+PROBLEM:lots of words are of equal frequencies , around 3.833, need more data. Targeting the problem, a new extract function was written to target news articles with Latin America & Carribean tag.
+
+PROBLEM: HTTPError raised while running master_extrac on BBC_html2text_LAC
+
+try and except is added to the problem at 'response = request.urlopen(url)'
+
+PROBLEM: new error arised. Crashed at filename assignment line (line 63), index out of list. Maybe an empty list went in.
+
+If statement 'is not None', changed to 'is not []'
+
+BBC_zika_3: 78 articles preprocessed by vectorizer, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+BBC_zika_4: 78 articles, feed into wordcloud as a single string
+
+BBC results are pretty weird
+
+Moving on the CBC
+
+CBC_zika_1: 31 articles preprocessed by vectorizer, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+CBC_zika_2: 31 articles feed in as one single string, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+BBC_zika_5: 78 articles, feed into wordcloud as a single string, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+There are some irrelevant articles, need to manually trim them out.
+CBC has fewer articles to work with
+
+BBC_zika_6: 97 articles feed in as a single string, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+*BBC_zika_7: 97 articles preprocessed by vectorizer, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+PROBLEM: need to normalize the frequencies according to the length of the articles,cause some articles are significantly longer than others
+
+PROBLEM: need to do stemming
+
+PROBLEM: dataset is too small, deleting a few irrelevant articles can have big changes on the word cloud
+
+BBC_zika_8: 97 articles vectorized ("heartbreaking" and "depending" has frequencies of 4.89 only
+
+#BBC_zika_9: 97 articles single string, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+*CBC_zika_3: 39 articles vectorized, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+#CBC_zika_4: 39 articles single string, word cloud restrictions: max_font_size = 40, relative_scaling = .5
+
+
